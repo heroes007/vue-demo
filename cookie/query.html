@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let query = location.search
+    let queryString = query.substring(1)
+    let Arr =queryString.split("&")
+    let obj = {}
+    function found(){
+        Arr.forEach(item=>{
+            let newArr = item.split("=")
+            let key = newArr[0].trim()
+            let value = newArr[1]
+            obj[key] =  value
+        })
+        return obj
+    }
+    let queryObj = found()
+</script>
+</html>
